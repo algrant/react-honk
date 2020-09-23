@@ -11,3 +11,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#honks{
+  opacity: 0;
+}
+
+#honks.honk{
+  opacity: 1;
+}
+
+#bottombeak > path, #topbeak > path{
+  transform: rotate(0deg);
+}
+
+#bottombeak.honk > path{
+  transform: rotate(20deg);
+  transform-origin: 308px 139px;
+  fill: #d37231;
+}
+
+#topbeak.honk > path{
+  transform: rotate(-20deg);
+  transform-origin: 299px 120px
+}
+
+#honkWrapper {
+  width:  350px;
+  height: 350px;
+}
+
+.BdayMessage {
+  width: 80vw;
+  max-width: 800px;
+  max-height: calc(100vh - 350px);
+  overflow-y: scroll;
+  font-size: 2em;
+}
+
+.BdayMessage::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.BdayMessage {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.App {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
